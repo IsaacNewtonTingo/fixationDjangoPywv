@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{%block title%} PYWV {%endblock%}</title>
+    <link rel="icon" type="image/x-icon" href="https://i0.wp.com/positiveyoungwomenvoices.org/wp-content/uploads/2017/09/db6b4b16-3466-4d83-b0da-febb3e5b7a832.png?fit=200%2C200&ssl=1">
+
+    <link rel="stylesheet" href="{% static 'newCss/mainStyles.css' % }" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://kit.fontawesome.com/c8e139d437.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    
+    <header class="header " id="myHeader">
+      <div class="headerDiv">
+        <div class="logoContainer">
+          <img
+            class="logo"
+            src="https://i0.wp.com/positiveyoungwomenvoices.org/wp-content/uploads/2017/09/db6b4b16-3466-4d83-b0da-febb3e5b7a832.png?fit=200%2C200&ssl=1"
+            alt="Positive young women voices"
+          />
+          <img onclick="toggleMenu()" class="menuIcon" src='{% static "images/menu.png" %}' alt="Ape30 technologies logo">
+        </div>
+  
+        <nav>
+          <ul>
+            <li><a href="{%url 'home'%}"> Home</a></li>
+  
+            <li class="resourcesBTNAboutUs" onclick="openAboutUs()">About us</li>
+            <div id="myDropdownAboutUs" class="dropdown-contentAboutUs">
+              <a href="{%url 'aboutUs'%}">Our story</a> <br />
+              <hr />
+              <a href="{%url 'theTeam'%}">The team</a>
+            </div>
+  
+            <li class="resourcesBTNWhat" onclick="openWhat()">What we do</li>
+            <div id="myDropdownWhat" class="dropdown-contentWhat">
+              
+              <a href="{%url 'adoptAGirlsMonth'%}"
+                >Adopt a girls month initiative</a
+              >
+              <br />
+              <hr />
+              
+              <a href="{%url 'endingViolence'%}"
+                >Ending violence against women and girls</a
+              >
+              <hr />
+              
+              <a href="{%url 'lbqSupport'%}">LBQ support forums</a>
+            </div>
+            
+            <li><a href="{%url 'contactUs'%}"> Contact us</a></li>
+  
+            <li class="resourcesBTN" onclick="openResources()">Resources</li>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="{%url 'flourish'%}">Flourish toolbox</a> <br />
+              <hr />
+              
+              <a href="{%url 'pywv2022_2026StrategicPlan'%}"
+                >PYWV 2022 – 2026 Strategic Plan</a
+              >
+            </div>
+          </ul>
+        </nav>
+  
+        <button class="donateBTN"> <a style="font-size:12px ;color:white ;" href="https://www.changa.co.ke/fundraiser/14948"target="_blank">Donate</a> </button>
+  
+        <div class="socials">
+          <a href="https://www.instagram.com/pywv2017/" target="_blank">
+            <img
+              src="{%static 'theblog/images/Instagram-logo-free-download-PNG.png' %}"
+              alt="instagram logo "
+          /></a>
+          <a href="https://twitter.com/GirlsWomenPower" target="_blank">
+            <img
+              src="{%static 'theblog/images/Logo-Twitter-icon-transparent-PNG.png' %}"
+              alt="twitter logo"
+          /></a>
+          <a
+            href="https://www.facebook.com/adolescentgirlsandyoungwomenvoices/"
+            target="_blank"
+          >
+            <img
+              src="{%static 'theblog/images/Popular-facebook-Logo-png.png' %}"
+              alt="facebook logo"
+          /></a>
+        </div>
+
+      </div>
+
+      <div class="headerDivMobile">
+        <div class="logoContainer">
+          <img
+            class="logo"
+            src="https://i0.wp.com/positiveyoungwomenvoices.org/wp-content/uploads/2017/09/db6b4b16-3466-4d83-b0da-febb3e5b7a832.png?fit=200%2C200&ssl=1"
+            alt="Positive young women voices"
+          />
+         
+          <i style="font-size:36px" onclick="toggleMenu()" class="fa-solid fa-bars"></i>
+        </div>
+  
+        <div id="openListMobile" class="openListMobile">
+          <nav>
+            <ul>
+              <li><a href="{%url 'home'%}"> Home</a></li>
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About us
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                  <li><a class="dropdown-item" href="{%url 'aboutUs'%}">Our story</a></li>
+                  <li><a class="dropdown-item" href="{%url 'theTeam'%}">The team</a></li>
+                </ul>
+              </li>
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  What we do
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item" href="{%url 'adoptAGirlsMonth'%}">Adopt a girls month initiative</a></li>
+                  <li><a class="dropdown-item" href="{%url 'endingViolence'%}">Ending violence against women and girls</a></li>
+                  <li><a class="dropdown-item" href="{%url 'lbqSupport'%}">LBQ support forums</a></li>
+                </ul>
+              </li>
+              
+              <li><a href="{%url 'contactUs'%}"> Contact us</a></li>
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Resources
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item" href="{%url 'flourish'%}">Flourish toolbox</a></li>
+                  <li><a class="dropdown-item" href="{%url 'pywv2022_2026StrategicPlan'%}">PYWV 2022 – 2026 Strategic Plan</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </nav>
+    
+          <button class="donateBTN"> <a style="font-size:12px ;color:white ;" href="https://www.changa.co.ke/fundraiser/14948"target="_blank">Donate</a> </button>
+    
+          <!-- <div class="socials">
+            <a href="https://www.instagram.com/pywv2017/" target="_blank">
+              <img
+                src="{%static 'theblog/images/Instagram-logo-free-download-PNG.png' %}"
+                alt="instagram logo "
+            /></a>
+            <a href="https://twitter.com/GirlsWomenPower" target="_blank">
+              <img
+                src="{%static 'theblog/images/Logo-Twitter-icon-transparent-PNG.png' %}"
+                alt="twitter logo"
+            /></a>
+            <a
+              href="https://www.facebook.com/adolescentgirlsandyoungwomenvoices/"
+              target="_blank"
+            >
+              <img
+                src="{%static 'theblog/images/Popular-facebook-Logo-png.png' %}"
+                alt="facebook logo"
+            /></a>
+          </div> -->
+        </div>
+        
+
+      </div>
+    </header>
+
+    <div >{%block content%} {%endblock%}</div>
+
+    <footer>
+
+      <div class="footerDiv" > 
+
+        <div>
+          <h2>Follow us</h2>
+          <a href="https://www.instagram.com/pywv2017/" target="_blank">
+            <img
+              src="{%static 'theblog/images/Instagram-logo-free-download-PNG.png' %}"
+              alt="instagram logo "
+          /></a>
+          <a href="https://twitter.com/GirlsWomenPower" target="_blank">
+            <img
+              src="{%static 'theblog/images/Logo-Twitter-icon-transparent-PNG.png' %}"
+              alt="twitter logo"
+          /></a>
+          <a
+            href="https://www.facebook.com/adolescentgirlsandyoungwomenvoices/"
+            target="_blank"
+          >
+            <img
+              src="{%static 'theblog/images/Popular-facebook-Logo-png.png' %}"
+              alt="facebook logo"
+          /></a>
+  
+          <form action="">
+            <label class="forMail" for="">Subscribe to our mailing list</label>
+            <br />
+            <input
+              class="mailInput"
+              type="email"
+              placeholder="Enter email address"
+              required
+            />
+            <input class="submitEmail" type="submit" />
+          </form>
+        </div>
+  
+  
+        <div>
+          <h2>Contact us</h2>
+          <h6><a href="tel:+254719858515">+254719858515</a></h6>
+          <h6><a href="">info@positiveyoungwomenvoices.org</a></h6>
+  
+          <h6>
+            <a href="www.positiveyoungwomenvoices.org/"
+              >positiveyoungwomenvoices.org</a
+            >
+          </h6>
+  
+          <button class="donateBTNFooter"><a  href="https://www.changa.co.ke/fundraiser/14948"target="_blank">Donate</a> </button>
+        </div>
+  
+  
+        <div>
+          <h2>Quick links</h2>
+          <h6><a href="">Home</a></h6>
+          <h6><a href="">About us</a></h6>
+          <h6><a href="">What we do</a></h6>
+          <h6><a href="">Contact us</a></h6>
+          <h6><a href="">Resources</a></h6>
+        </div>
+
+      </div>
+
+      <!-- <h6 style="text-align:center  ; margin-top:100px; color:gray" >
+        Designed and developed by
+        <a style="color:coral ;" href="https://ape30technologies.herokuapp.com/"
+          >Ape 30 technologies</a
+        >
+      </h6> -->
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //Open menu list---------------------------
+
+      function toggleMenu(){
+      var menuItems= document.getElementById('openListMobile')
+       if (menuItems.style.display=='flex')
+          menuItems.style.display='none'
+        else{
+          menuItems.style.display='flex'
+        }
+      }
+
+      //Navigation-------------------------------
+      function goToAdopt() {
+        window.location.href = "{%url 'adoptAGirlsMonth'%}";
+      }
+      
+      function goToDonate() {
+        window.location.replace = "https://www.changa.co.ke/fundraiser/14948";
+      }
+      function goToLBQ() {
+        window.location.href = "{%url 'lbqSupport'%}";
+      }
+
+      function goToViolence() {
+        window.location.href = "{%url 'endingViolence'%}";
+      }
+
+      function goToActivities() {
+        window.location.href = "{%url 'aboutUs'%}";
+      }
+
+      function goToMens() {
+        window.location.href = "{%url 'mens'%}";
+      }
+
+     
+      //Dropdown menu............................
+
+      function openResources() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      function openWhat() {
+        document.getElementById("myDropdownWhat").classList.toggle("show");
+      }
+      function openAboutUs() {
+        document.getElementById("myDropdownAboutUs").classList.toggle("show");
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches(".resourcesBTN")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+
+        if (!event.target.matches(".resourcesBTNWhat")) {
+          var dropdowns = document.getElementsByClassName(
+            "dropdown-contentWhat"
+          );
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+
+        if (!event.target.matches(".resourcesBTNAboutUs")) {
+          var dropdowns = document.getElementsByClassName(
+            "dropdown-contentAboutUs"
+          );
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+
+      //Wobble effect on text...............................
+
+      // Create array of any elements with "wobble" class
+      const all = document.querySelectorAll(".wobble");
+
+      // Iterate through each "wobble"
+      all.forEach((el) => {
+        // Get the text content of the element
+        let text = el.textContent;
+        // Create an array of separate letters
+        text = text.split("");
+        // Iterate through each letter and give it its own span element and individual animation delay offset
+        const textCode = text.map((x, idx) => {
+          let delay = (idx + 1) * 50;
+          return `<span style="animation-delay: ${delay}ms">${x}</span>`;
+        });
+        // replace the element's html with our dynamically created html
+        el.innerHTML = textCode.join(" ");
+      });
+
+      //scroll effects................................
+
+      const scrollElements = document.querySelectorAll(".js-scroll");
+
+      const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        return (
+          elementTop <=
+          (window.innerHeight || document.documentElement.clientHeight) /
+            dividend
+        );
+      };
+
+      const elementOutofView = (el) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        return (
+          elementTop >
+          (window.innerHeight || document.documentElement.clientHeight)
+        );
+      };
+
+      const displayScrollElement = (element) => {
+        element.classList.add("scrolled");
+      };
+
+      const hideScrollElement = (element) => {
+        element.classList.remove("scrolled");
+      };
+
+      const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+          if (elementInView(el, 1.25)) {
+            displayScrollElement(el);
+          } else if (elementOutofView(el)) {
+            hideScrollElement(el);
+          }
+        });
+      };
+
+      window.addEventListener("scroll", () => {
+        handleScrollAnimation();
+      });
+    </script>
+  </body>
+</html>
