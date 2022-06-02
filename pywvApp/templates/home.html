@@ -180,28 +180,6 @@
             </div>
           </div>
         </a>
-
-            <!-- <ul>
-              <li>
-                <a href="{% url 'article-details' post.pk %}">
-                  {{post.title}} </a
-                >
-              <a href="{%url 'category' post.category|slugify %}">{{post.category}}-</a> 
-                {{post.author.first_name}} {{post.author.last_name}}
-
-                {%if user.is_authenticated%}
-                {%if user.id == post.author.id%}
-                
-                - <a href="{% url 'update_post' post.pk %}">Edit</a> - <a href="{% url 'delete_post' post.pk %}">Delete</a>
-                <br />
-                {%endif%}
-                {%endif%}
-
-                <small>{{post.date_created}}</small><br><br>
-
-                {{post.snippet}}
-              </li>
-            </ul> -->
         {%endfor%}
     </section>
   </body>
