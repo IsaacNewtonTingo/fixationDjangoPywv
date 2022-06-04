@@ -178,9 +178,10 @@
       <h5> <a href=""> View all</a></h5>  
     </div>
     
+
     <section class="recentPostsSection">
         {% for post in object_list|slice:":3" %}
-
+        {%if post %}
         <a class="card-link" href="{% url 'article-details' post.pk %}">
           <div class="card">
             {%if post.header_image%}
@@ -198,8 +199,10 @@
             </div>
           </div>
         </a>
+        {%endif%}
         {%endfor%}
     </section>
+
 
     <h1 class="wobble ourActivitiesTextAbsolute">Our partners</h1>
 
