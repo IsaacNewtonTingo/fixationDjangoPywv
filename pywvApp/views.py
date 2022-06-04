@@ -56,6 +56,15 @@ class DeletePostView(DeleteView):
 def Home(request):
         return render(request, "home.html")
 
+class AllPosts(ListView):
+    model= Post
+    template_name='allPosts.html'
+    ordering=['-id']
+    
+    def get_context_data(self,*args, **kwargs):
+        context=super(AllPosts,self).get_context_data(*args, **kwargs)
+        return context
+
 def ContactUs(request):
         return render(request, "contactUs.html")
     

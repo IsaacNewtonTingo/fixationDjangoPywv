@@ -817,6 +817,26 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.allPostsDiv {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(243, 243, 243);
+  margin: 35px;
+  border: #919191 solid 1px;
+}
+.allPostSection{
+  padding: 40px;
+  background-image: linear-gradient(rgb(255, 221, 235), white);
+}
+.allPostsText{
+  margin-left: 100px;
+  text-shadow: none;
+  font-weight: 700;
+  color: #006d5b;
+  font-size: 30px;
+}
 .writerAndDate {
   display: flex;
 }
@@ -1048,6 +1068,7 @@ footer img {
   margin-right: 30px;
   cursor: pointer;
   height: 500px;
+  margin-bottom: 20px;
 }
 .card-title{
   font-weight: 900;
@@ -1534,10 +1555,11 @@ footer form{
 }
 .partnersSection{
   padding: 0 20px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  margin-top: 40px;
 }
 .partnersSection img{
-  width: 50px;
+  width: 80px;
 }
 .donateSection{
   padding: 20px;
@@ -1563,5 +1585,23 @@ footer form{
 }
 .fa-circle-dollar-to-slot{
   margin-right: 20px;
+}
+.allPostsDiv {
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color:transparent;
+  border: none;
+  margin: 20px 0 0 20px;
+  justify-content: center;
+  align-items: center;
+}
+.allPostsText{
+  font-size: 25px;
+  margin: 0px 0 10px 40px;
+}
+.allPostSection{
+  padding: 0;
 }
 }
