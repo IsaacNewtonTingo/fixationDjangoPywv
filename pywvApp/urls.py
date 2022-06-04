@@ -36,5 +36,6 @@ urlpatterns = [
     path('resources', views.Resources, name="resources"),
     path('theTeam', views.TheTeam, name="theTeam"),
     path('whatWeDo', views.WhatWeDo, name="whatWeDo"),
+    path('Donate', views.Donate, name="Donate"),
     
 ]

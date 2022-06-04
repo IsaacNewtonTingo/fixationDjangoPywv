@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{%block title%} PYWV {%endblock%}</title>
     <link rel="icon" type="image/x-icon" href="https://i0.wp.com/positiveyoungwomenvoices.org/wp-content/uploads/2017/09/db6b4b16-3466-4d83-b0da-febb3e5b7a832.png?fit=200%2C200&ssl=1">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <link rel="stylesheet" href="{% static 'css/mainStyles.css' % }" />
 
@@ -30,7 +32,6 @@
             src="https://i0.wp.com/positiveyoungwomenvoices.org/wp-content/uploads/2017/09/db6b4b16-3466-4d83-b0da-febb3e5b7a832.png?fit=200%2C200&ssl=1"
             alt="Positive young women voices"
           />
-          <img onclick="toggleMenu()" class="menuIcon" src='{% static "images/menu.png" %}' alt="Ape30 technologies logo">
         </div>
   
         <nav>
@@ -75,7 +76,7 @@
           </ul>
         </nav>
   
-        <button class="donateBTN"> <a style="font-size:12px ;color:white ;" href="https://www.changa.co.ke/fundraiser/14948"target="_blank">Donate</a> </button>
+        <button class="donateBTN"> <a style="font-size:12px ;color:white ;" href="{%url 'Donate'%}" >Donate</a> </button>
   
         <div class="socials">
           <a href="https://www.instagram.com/pywv2017/" target="_blank">
@@ -152,12 +153,11 @@
             </ul>
           </nav>
     
-          <button class="donateBTN"> <a style="font-size:12px ;color:white ;" href="https://www.changa.co.ke/fundraiser/14948"target="_blank">Donate</a> </button>
+          <button class="donateBTN"> <a style="font-size:12px ;color:white ;" href="{%url 'Donate'%}">Donate</a> </button>
     
          
         </div>
         
-
       </div>
     </header>
 
@@ -213,7 +213,7 @@
             >
           </h6>
   
-          <button class="donateBTNFooter"><a  href="https://www.changa.co.ke/fundraiser/14948"target="_blank">Donate</a> </button>
+          <button class="donateBTNFooter"><a  href="{%url 'Donate'%}">Donate</a> </button>
         </div>
   
   

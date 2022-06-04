@@ -124,3 +124,6 @@ def TheTeam(request):
     
 def WhatWeDo(request):
         return render(request, "whatWeDo.html")
+
+def Donate(request):
+        return render(request, "donationPage.html")
