@@ -2,14 +2,14 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
-from  ckeditor.fields import RichTextField
+from  ckeditor_uploader.fields import RichTextUploadingField
 
 class Post(models.Model):
     title=models.CharField(max_length=255)
     header_image=models.ImageField(null=True, blank=True, upload_to='images')
     title_tag=models.CharField(max_length=255, )
     author=models.ForeignKey(User, on_delete=models.CASCADE)
-    body=RichTextField(blank=True,null=True)
+    body=RichTextUploadingField(blank=True,null=True)
     date_created=models.DateField(auto_now_add=True)
     snippet=models.CharField(max_length=255)   
 
