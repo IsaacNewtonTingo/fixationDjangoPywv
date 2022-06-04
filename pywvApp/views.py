@@ -5,6 +5,7 @@ from django.views.generic import ListView,DetailView,CreateView, UpdateView, Del
 from .models import  Post,Comment
 from .forms import PostForm,CommentForm
 
+
 class HomeView(ListView):
     model= Post
     template_name='home.html'
