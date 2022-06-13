@@ -74,9 +74,6 @@ def AboutUs(request):
 def AdoptAGirlsMonth(request):
         return render(request, "adoptAGirlsMonth.html")
     
-def EndingViolence(request):
-        return render(request, "endingViolence.html")
-    
 def Flourish(request):
         return render(request, "flourish.html")
     
@@ -94,9 +91,82 @@ def Resources(request):
     
 def TheTeam(request):
         return render(request, "theTeam.html")
+
+def LydiaOdipo(request):
+        return render(request, "lydiaOdipo.html")
+
+def AnneMugo(request):
+        return render(request, "anneMugo.html")
+
+def BerylWafula(request):
+        return render(request, "berylWafula.html")
+
+def ConsolataAkoth(request):
+        return render(request, "consolataAkoth.html")
+
+def CynthiaKatanu(request):
+        return render(request, "cynthiaKatanu.html")
+
+def EstherAoko(request):
+        return render(request, "estherAoko.html")
+
+def FaheKerubo(request):
+        return render(request, "faheKerubo.html")
+
+def MercyWanjiko(request):
+        return render(request, "mercyWanjiko.html")
+
+def RisperSarota(request):
+        return render(request, "risperSarota.html")
+
+def LucyNjenga(request):
+        return render(request, "lucyNjenga.html")
+
+def Marylizz(request):
+        return render(request, "marylizz.html")
+
+def CynthiaBuchira(request):
+        return render(request, "cynthiaBuchira.html")
+
+def SharonNyakundi(request):
+        return render(request, "sharonNyakundi.html")
+
+def Terry(request):
+        return render(request, "terry.html")
+
+def Lizz(request):
+        return render(request, "lizz.html")
     
 def WhatWeDo(request):
         return render(request, "whatWeDo.html")
 
 def Donate(request):
         return render(request, "donationPage.html")
+
+def Scholarships(request):
+        return render(request, "scholarships.html")
+
+def Empowerment(request):
+        return render(request, "empowerment.html")
+    
+def Healthcare(request):
+        return render(request, "healthcare.html")
+
+def Rights(request):
+        return render(request, "rights.html")
+
+def HIV(request):
+        return render(request, "hivPrevention.html")
+def MentalHealth(request):
+        return render(request, "mentalHealth.html")
+
+
+    
+def EndingViolence(request):
+        return render(request, "endingViolence.html")
+def GenderRights(request):
+        return render(request, "genderRights.html")
+def WeLead(request):
+        return render(request, "weLead.html")
+def CommunityEngagement(request):
+        return render(request, "communityEngagement.html")

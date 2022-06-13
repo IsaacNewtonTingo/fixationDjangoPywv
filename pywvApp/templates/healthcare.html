@@ -1,0 +1,65 @@
+{%extends 'base.html'%} {%block content%}
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <link rel="stylesheet" href="{%static 'very/mainStyles.css'%}">
+    <title>{%block title%} Access to inclusive healthcare || pywv {%endblock%}</title>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+    <section class="healthcareSection ">
+    <h1>Access to inclusive <span>healthcare</span> </h1>
+
+      <div class="healthcareItems">
+        <div onclick="goToMens()" class="didi">
+          <img src="{%static 'images/adopt.png' %}"/>
+          <h3>Menstrual Health and Mentorship</h3>
+
+          <p>
+            The mentorship department works closely with adolescent girls of ages 9 to 19 in all their diversities in the Dandora community. We meet with girls in the community, and a large number of around 200...
+          </p>
+
+          <button onclick="goToMens()" class="whatBTN">View</button>
+        </div>
+
+        <div onclick="goToHIV()" class="didi">
+          <img src="{%static 'images/violence.png' %}"/>
+          <h3>HIV prevention and care</h3>
+
+          <p>
+            Ending the AIDS Epidemic will depend on greater efforts to reduce new HIV Infections, prevent AIDS-related deaths, create awareness on U=U and bridge the gap between civil societies, healthcare providers...
+          </p>
+
+          <button onclick="goToHIV()" class="whatBTN">View</button>
+        </div>
+
+        <div onclick="goToMentalHealth()" class="didi">
+          <img
+            class="lgbtq"
+            src="https://cdn.pixabay.com/photo/2021/02/28/00/46/pride-6056043_1280.png"
+            alt=""
+          />
+          <h3>Mental health</h3>
+
+          <p>
+            A healthy mind and body equals a wealthy person. At PYWV, we believe when our mental health is taken care of, our physical, social, intellectual and psychological states exist in peace and harmony and by extension, so do our...
+
+
+          </p>
+
+          <button onclick="goToMentalHealth()" class="whatBTN">View</button>
+        </div>
+
+      </div>
+    </section>
+  </body>
+
+</html>
+ {%endblock%}

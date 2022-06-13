@@ -5,99 +5,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{%static 'css/mainStyles.css'%}">
-    <title>{%block title%}Ending gender based violence || Positive young women voices {%endblock%}</title>
+    <link rel="stylesheet" href="{%static 'very/mainStyles.css'%}">
+    <title>{%block title%}Prevention and ending violence against women and girls || Positive young women voices {%endblock%}</title>
   </head>
   <body>
  
+    <section class="mensSection">
+      <div class="holdingContainer">
 
-    <section class="adoptSection">
-      <div class="imgAndTxtContainer">
-        <div>
-          <h2>Ending Violence Against Women and Girls (VAWG)</h2>
+        <div class="">
+          <h1>Prevention and ending violence against women and girls</h1> <br>
+         <img src="../../static/images/prevViolence.JPG" alt="Prevention and ending violence against women and girls- pywv">
+           <br><br>
           <p>
-            Behind every woman and girl there is an untold story and in most
-            case is a sad story. Women and girls go through various challenges
-            in life; gender based violence being the most rampant. This is due
-            to the patriarchal system and cultural factors that deny women power
-            to decide on their human rights. This triples amongst young women
-            and girls living in informal settlements like Dandora. High rates of
-            insecurity, lack of safe spaces, poverty, discrimination and lack of
-            knowledge on their rights increases the vulnerability women and
-            girls have to gender based violence. This also worsens as women not
-            even aware if their rights are being violated. They end up living in
-            constant fear. PYWV is able to provide a safe space where women and
-            girls feel free to open up and share their life experiences.
-            <span>
-              Through our monthly VAWG forums we have managed to empower as of
-              January 2021, 100 young women on different forms of VAWG. The
-              platform provides a safe space where young girls are equipped with
-              skills to help them know how to go about in regards to their
-              rights as well as identifying and responding to VAWG.
-            </span>
-            Also we are able to create visibility on challenges experienced when
-            seeking for support in case of incidence of VAWG. Our forums embrace
-            the courage and resilience of young women and girls in life. Our
-            main aim is to encourage women that they have the ability to be
-            anything they envision and that behind their story there is victory,
-            a drive to succeed and power to inspire others.
+            We are in a society where <strong>Women and Girls are not safe</strong> anywhere and if we are to stand in solidarity, we have to pledge to do something to free women and girls from the shackles of Violence. At <strong>Positive Young Women Voices</strong> , we are currently conducting a project, <strong>"Preventing and Ending Violence against women and Girls"</strong> .We engage young women in their diversity within the phases in <strong>Dandora</strong>  including teenage mothers, survivors of Gender Based Violence and those most affected through trainings’ conducted bi-montly discussing root causes of Violence, principles of Gender and the impact it creates in women, girls and community at large from a range of perspectives. <br><br>
+
+            In efforts of preventing and <strong>ending Violence against women and girls</strong> , we use a gender transformative intervention, involving young men and understanding the role they play as influencers and allies. We enhance victim/survivor centered response to Gender Based Violence by creating linkages with local authorities as well as referrals to the organizations and shelters responding to Gender Based Violence. <br> <br>
+
+            We trend the <strong>#ItEndsWithUs</strong>  because we start a conversation, we believe the survivors, we empower and stand against violence against women and girls.
+
+   
           </p>
         </div>
       </div>
     </section>
-
    
-
-    <script>
-      function openResources() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
-      function openWhat() {
-        document.getElementById("myDropdownWhat").classList.toggle("show");
-      }
-      function openAboutUs() {
-        document.getElementById("myDropdownAboutUs").classList.toggle("show");
-      }
-
-      window.onclick = function (event) {
-        if (!event.target.matches(".resourcesBTN")) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
-          }
-        }
-
-        if (!event.target.matches(".resourcesBTNWhat")) {
-          var dropdowns = document.getElementsByClassName(
-            "dropdown-contentWhat"
-          );
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
-          }
-        }
-
-        if (!event.target.matches(".resourcesBTNAboutUs")) {
-          var dropdowns = document.getElementsByClassName(
-            "dropdown-contentAboutUs"
-          );
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
-          }
-        }
-      };
-    </script>
   </body>
 </html>
 {%endblock%}

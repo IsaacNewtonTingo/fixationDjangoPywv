@@ -1,0 +1,36 @@
+{%extends 'base.html'%} {%block content%}
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'very/mainStyles.css'%}">
+    <title>{%block title%}Esther Aoko || Positive young women voices {%endblock%}</title>
+  </head>
+
+  <body>
+   
+    <section class="personSection">
+        <div class="myDiv">
+          <img
+            src="../../static/images/Esther Aoko. Communication officer.png"
+            alt="Esther Aoko Positive young women"
+            class="personImg"
+          />
+
+          <div>
+              <h4>Esther Aoko</h4>
+              <h6>Communication officer</h6>
+              <hr />
+              <p>
+                Esther Aoko is a sexual and reproductive health youth advocate, feminist and community volunteer. She is a champion for women which she believes is her most important role in life. Esther is currently working as the communications officer at Positive Young Women Voices where she also facilitates mentorship sessions under the Adopt A girls month program.
+              </p>
+          </div>
+        </div>
+
+    </section>
+  </body>
+  
+</html>
+{%endblock%}

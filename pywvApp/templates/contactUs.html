@@ -5,61 +5,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{%static 'css/mainStyles.css'%}">
+    <link rel="stylesheet" href="{%static 'very/mainStyles.css'%}">
     <title>{%block title%}Contact us || Positive young women voices {%endblock%}</title>
 
   <body>
 
     <section class="reachUs">
-      <div class="leftColored">
-        <h1>Get in touch</h1>
+      <div class="reachDiv">
+        <div class="leftColored">
+          <h2>Get in touch</h2>
         
-        <img
-          src="{%static 'images/callLogo.png'%}"
-          alt="call logo positive young women voices"
-        />
-        <h5><span> Call us:</span> <a href="">+254719858515</a></h5>
-        <img
-          src="{%static 'images/gmailLogo.png'%}"
-          alt="gmail logo positive young women voices"
-        />
-        <h5>
-          <span> Email:</span> <a href="">info@positiveyoungwomenvoices.org</a>
-        </h5>
-        <img
-          src="{%static 'images/smsLogo.png'%}"
-          alt="sms logo positive young women voices"
-        />
-        <h5><span>Text:</span> <a href="">+254719858515</a></h5>
-        <img
-          src="{%static 'images/whatsappLogo.png'%}"
-          alt="whatsapp logo positive young women voices"
-        />
-        <h5><span>WhatsApp:</span> <a href="">+254719858515</a></h5>
-      </div>
+          <hr>
 
-      <div class="formDiv">
-        <h1>What's in your mind?</h1>
+          <div class="contColl">
 
-        <form action="">
-          <label for="name">Name *</label>
-          <input type="text" placeholder="e.g John Doe" required />
-          <label for="email">Email *</label>
-          <input type="email" placeholder="e.g john@gmail.com" required />
-          <label for="phoneNumber">Phone number *</label>
-          <input type="tel" placeholder="e.g +254724753175" required />
-          <label for="message">Message *</label>
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="5"
-            required
-            placeholder="Your message here"
-          ></textarea>
-          <input class="subBtn" type="submit" />
-        </form>
+            <img
+              src="{%static 'images/callLogo.png'%}"
+              alt="call logo positive young women voices"
+            />
+            <h5><span> Call us:</span> <a href="">+254705973115</a></h5>
+          </div>
+
+          <div class="contColl">
+            <img
+              src="{%static 'images/smsLogo.png'%}"
+              alt="sms logo positive young women voices"
+            />
+            <h5><span>Text:</span> <a href="">+254705973115</a></h5>
+          </div>
+
+          <div class="contColl">
+          <img
+            src="{%static 'images/gmailLogo.png'%}"
+            alt="gmail logo positive young women voices"
+          />
+          <h5>
+            <span> Email:</span> <a href="">info@pywv.org</a>
+          </h5>
+        </div>
+
+        
+        </div>
+
+        <div class="formDiv">
+          <h1>What's on your mind?</h1>
+
+          <form action="">
+            <label for="name">Name *</label>
+            <input type="text" placeholder="e.g John Doe" required />
+            <label for="email">Email *</label>
+            <input type="email" placeholder="e.g john@gmail.com" required />
+            <label for="phoneNumber">Phone number *</label>
+            <input type="tel" placeholder="e.g +254724753175" required />
+            <label for="message">Message *</label>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="5"
+              required
+              placeholder="Your message here"
+            ></textarea>
+            <input class="subBtn" type="submit" />
+          </form>
+        </div>
       </div>
+      
     </section>
  
     <script>

@@ -40,26 +40,31 @@
   
             <li class="resourcesBTNAboutUs" onclick="openAboutUs()">About us</li>
             <div id="myDropdownAboutUs" class="dropdown-contentAboutUs">
-              <a href="{%url 'aboutUs'%}">Our story</a> <br />
+              <a href="{%url 'aboutUs'%}">Our why</a> <br />
               <hr />
               <a href="{%url 'theTeam'%}">The team</a>
             </div>
   
-            <li class="resourcesBTNWhat" onclick="openWhat()">What we do</li>
+            <li class="resourcesBTNWhat" onclick="openWhat()">Our work</li>
+
             <div id="myDropdownWhat" class="dropdown-contentWhat">
               
-              <a href="{%url 'adoptAGirlsMonth'%}"
-                >Adopt a girls month initiative</a
+              <a href="{%url 'Healthcare'%}"
+                >Access to Inclusive Healthcare</a
               >
               <br />
               <hr />
               
-              <a href="{%url 'endingViolence'%}"
-                >Ending violence against women and girls</a
+              <a href="{%url 'Rights'%}"
+                >Rights and Advocacy</a
               >
               <hr />
               
-              <a href="{%url 'lbqSupport'%}">LBQ support forums</a>
+              <a href="{%url 'Empowerment'%}">Socio-Economic Empowerment </a>
+
+              <hr />
+              
+              <a href="{%url 'Scholarships'%}">Scholarships </a>
             </div>
             
             <li><a href="{%url 'contactUs'%}"> Contact us</a></li>
@@ -122,19 +127,23 @@
                   About us
                 </a>
                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                  <li><a class="dropdown-item" href="{%url 'aboutUs'%}">Our story</a></li>
+                  <li><a class="dropdown-item" href="{%url 'aboutUs'%}">Our why</a></li>
                   <li><a class="dropdown-item" href="{%url 'theTeam'%}">The team</a></li>
                 </ul>
               </li>
     
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  What we do
+                  Our work
                 </a>
                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item" href="{%url 'adoptAGirlsMonth'%}">Adopt a girls month initiative</a></li>
-                  <li><a class="dropdown-item" href="{%url 'endingViolence'%}">Ending violence against women and girls</a></li>
-                  <li><a class="dropdown-item" href="{%url 'lbqSupport'%}">LBQ support forums</a></li>
+                  <li><a href="{%url 'Healthcare'%}"
+                    >Access to Inclusive Healthcare</a></li>
+                  <li><a href="{%url 'Rights'%}"
+                    >Rights and Advocacy</a
+                    ></li>
+                  <li><a href="{%url 'Empowerment'%}">Socio-Economic Empowerment </a></li>
+                  <li><a href="{%url 'Scholarships'%}">Scholarships </a></li>
                 </ul>
               </li>
               
@@ -254,29 +263,42 @@
       }
 
       //Navigation-------------------------------
-      function goToAdopt() {
-        window.location.href = "{%url 'adoptAGirlsMonth'%}";
+      function goToMens() {
+        window.location.href = "{%url 'menstruation-health-and-mentorship-pywv'%}";
       }
       
       function goToDonate() {
         window.location.replace = "https://www.changa.co.ke/fundraiser/14948";
       }
-      function goToLBQ() {
-        window.location.href = "{%url 'lbqSupport'%}";
+      function goToHIV() {
+        window.location.href = "{%url 'HIV-prevention-and-care-pywv'%}";
+      }
+
+      function goToMentalHealth() {
+        window.location.href = "{%url 'mental-health-pywv'%}";
       }
 
       function goToViolence() {
-        window.location.href = "{%url 'endingViolence'%}";
+        window.location.href = "{%url 'prevention-and-ending-violence-against-women-and-girls'%}";
+      }
+
+      function goToGenderRights() {
+        window.location.href = "{%url 'gender-rights-promotion'%}";
+      }
+
+      function goToWeLead() {
+        window.location.href = "{%url 'we-lead-project-pywv'%}";
+      }
+
+      function goToCommunityEngagement() {
+        window.location.href = "{%url 'community-engagement'%}";
       }
 
       function goToActivities() {
         window.location.href = "{%url 'aboutUs'%}";
       }
 
-      function goToMens() {
-        window.location.href = "{%url 'mens'%}";
-      }
-
+     
      
       //Dropdown menu............................
 
@@ -393,6 +415,22 @@
       window.addEventListener("scroll", () => {
         handleScrollAnimation();
       });
+
+
+
+      function readMore() {
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+      
+        if (btnText.style.display === "none") {
+         
+          btnText.style.display= "none"; 
+          moreText.style.display = "inline";
+        } else {
+          btnText.style.display= "inline"; 
+          moreText.style.display = "none";
+        }
+      }
     </script>
   </body>
 </html>
