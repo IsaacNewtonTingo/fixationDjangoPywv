@@ -17,6 +17,14 @@
       <br>
       <small >By:{{post.author.first_name}} {{post.author.last_name}} <span style="color:gray ;"> {{post.date_created}} </span>  </small>
 
+      {%if user.is_authenticated%}
+        {%if user.id == post.author.id%}
+        
+        - <a href="{% url 'update_post' post.pk %}">Edit</a> - <a href="{% url 'delete_post' post.pk %}">Delete</a>
+        <br />
+        {%endif%}
+        {%endif%}
+
   <br/>
   <br>
 

@@ -1,27 +1,42 @@
-{%extends 'base.html'%}
-{% block title %}Add post{% endblock %}  
-{%block content%}
+{%extends 'base.html'%} {%block content%}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-{%if user.is_authenticated%}
-<h1>Add post</h1>
-<br><br>
+    <link rel="stylesheet" href="{%static 'very/mainStyles.css'%}">
+    <title>{%block title%} Add post {%endblock%}</title>
+</head>
+<body>
 
-<div class="form-group">
-    <form action="" method="POST" enctype="multipart/form-data">
-        {%csrf_token%}
-        {{form.media}}
-        {{form.as_p}}
-        <button class="btn btn-secondary">Post</button>
-    </form>
-</div>
-<br><br><br><br><br><br><br><br>
-<script>
-    var name="{{user.id}}"
-    document.getElementById('elder').value=name
-</script>
+    <section class="addPostSection">
+        {%if user.is_authenticated%}
+        <h1>Add a blog post</h1>
+        <br><br>
 
-{%else%}
-Login or signup
-{%endif%}
+        <div class="form-group">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {%csrf_token%}
+                {{form.media}}
+                {{form.as_p}}
+                <button class="btn btn-secondary">Post</button>
+            </form>
+        </div>
 
+        <br><br><br><br><br><br><br><br>
+
+        <script>
+            var name="{{user.id}}"
+            document.getElementById('elder').value=name
+        </script>
+
+        {%else%}
+        
+        <h1 style="text-align: center; margin:200px 0;">You are not authorized here</h1>
+        {%endif%}
+    </section>
+</body>
+</html>
 {%endblock%}

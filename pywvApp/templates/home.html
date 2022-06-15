@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-    <link rel="stylesheet" href="{%static 'esto/mainStyles.css'%}">
+    <link rel="stylesheet" href="{%static 'very/mainStyles.css'%}">
     <title>{%block title%} Positive young women voices {%endblock%}</title>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -24,36 +24,60 @@
 
   <body>
 
-    <div>
+    <div id="carouselExampleInterval" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+
+      <div class="nameDiv  ">
+        <h2 class="headerGlow">PYWV</h2>
+ 
+        <h5>Positive Young Women Voices</h5>
+        <p>Humanizing young women and adolescent girls in all their diversities.</p>
+      </div>
+
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="2000">
-          <img src="../../static/images/corou1.jpg" class="d-block w-100" alt="...">
+
+        
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img src="../../static/images/newDisp1.jpg" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="../../static/images/corou2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="../../static/images/newDisp2.jpg" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="../../static/images/corou3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-item" data-bs-interval="4000" >
+          <img src="../../static/images/newDisp4.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
-     
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+
+    <!-- <div class="mainImgDiv">
+      <img src="../../static/images/displayImage.jpg" alt="">
+      <div class="nameDiv">
+        <h2>PYWV</h2>
+      </div>
+    </div> -->
 
     <section class="visionMissionLandingSection">
       <div class="visionMissionLanding">
         <div class="scroll-element js-scroll slide-left" >
-          <img class="visMisVal glow" src="../../static/images/vision.png" alt="">
+          <img class="visMisVal " src="../../static/images/vision.png" alt="">
           <h4><span>Humanizing</span>  young women and adolescent girls in all their diversities</h4>
         </div>
   
         <div class="scroll-element js-scroll slide-right">
-          <img class="visMisVal glow" src="../../static/images/mission.png" alt="">
+          <img class="visMisVal " src="../../static/images/mission.png" alt="">
           <h4><span>Mentor and advocate</span>  for young women and adolescent girls in all their diversities to advance their rights through access to inclusive healthcare, advocacy and social and economic empowerment</h4>
         </div>
       </div>
 
       <div class="valuesDiv scroll-element js-scroll slide-left">
-        <img class="visMisVal glow" src="../../static/images/core-value.png" alt="">
+        <img class="visMisVal " src="../../static/images/core-value.png" alt="">
 
         <div class="valueItemContainer">
           <div>
@@ -92,30 +116,30 @@
 
   
     <h1 class="wobble achievementText">Our achievement</h1>
-    <section class="numbersSection content">
+    <section class="numbersSection ">
       
       <div class="numbersContainer ">
 
         <img src="../../static/images/girls.png" alt="">
-        <h2 class="pluSign"><span class="counter"> 300 </span> +  </h2>
+        <h2 class="pluSign"><span class="counter-count"> 300 </span> +  </h2>
         <h2>Girls reached</h2>
       </div>
 
       <div class="numbersContainer">
         <img src="../../static/images/pads.png" alt="">
-        <h2 class="pluSign"><span class="counter"> 36000 </span> +  </h2>
+        <h2 class="pluSign"><span class="counter-count"> 36000 </span> +  </h2>
         <h2>Pads distributed </h2>
       </div>
 
       <div class="numbersContainer">
         <img src="../../static/images/training.png" alt="">
-        <h2 class="pluSign"><span class="counter"> 50 </span> +  </h2>
+        <h2 class="pluSign"><span class="counter-count"> 50 </span> +  </h2>
         <h2>Training programmes covered</h2>
       </div>
     </section>
 
 
-    <section class="stackblocksLetterSection scroll-element js-scroll slide-left">
+    <section class="stackblocksLetterSection">
       <h1 class="wobble newsletterText">Newsletter</h1>
 
       <div class="stackblocksLetter stackblocks-embed" data-stackblock="cl4e0ah9f004809l185xo1hdv"></div>
@@ -129,7 +153,7 @@
     </div>
     
 
-    <section class="recentPostsSection scroll-element js-scroll slide-right">
+    <section class="recentPostsSection">
         {% for post in object_list|slice:":3" %}
         {%if post %}
         <a class="card-link" href="{% url 'article-details' post.pk %}">
@@ -156,7 +180,7 @@
 
     <h1 class="wobble ourActivitiesTextAbsolute">Our partners</h1>
 
-    <section class="partnersSection scroll-element js-scroll slide-left">
+    <section class="partnersSection">
       <a href="https://ajws.org/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Ajws-org-logo.svg/1200px-Ajws-org-logo.svg.png" alt="american jewish world service positive young women's voices">
       </a>
@@ -172,6 +196,14 @@
       <a href="https://hivos.org/" target="_blank">
         <img src="https://hivos.org/assets/2018/07/HIVOS-2.jpg" alt=" Hivos positive young women's voices">
       </a>
+
+      <a href="https://wearepurposeful.org/" target="_blank">
+        <img src="https://wearepurposeful.org/wp-content/uploads/2021/01/Purposeful-logo-400px.png" alt=" Hivos positive young women's voices">
+      </a>
+
+      <a href="https://www.daysforgirls.org//" target="_blank">
+        <img src="https://www.daysforgirls.org/wp-content/uploads/2020/12/Days-For-Girls-logo.png" alt=" Hivos positive young women's voices">
+      </a>
       
     </section>
   
@@ -184,6 +216,18 @@
         time: 1200
       });
     });
+
+    $('.counter-count').each(function () {
+      $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+      }, {
+          duration: 50000,
+          easing: 'swing',
+          step: function (now) {
+              $(this).text(Math.ceil(now));
+          }
+      });
+  });
     
     
    </script>

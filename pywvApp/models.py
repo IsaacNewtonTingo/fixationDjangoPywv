@@ -17,7 +17,7 @@ class Post(models.Model):
         return self.title + '|' + str(self.author)
     
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('allPosts')
     
 class Comment(models.Model):
     post=models.ForeignKey(Post,related_name='comments', on_delete=models.CASCADE)

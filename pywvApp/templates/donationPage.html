@@ -19,7 +19,7 @@
         </div>
        
         <div class="innerDonateContainer">
-            <img src="https://res.cloudinary.com/changa/image/upload/c_scale,f_auto,q_auto,w_520/v1533895397/commonshare/M-ChangaHiRes_Rectangle.png" alt="positive young women's voices mchanga donation">
+            <img class="otherDonateImgs" src="https://res.cloudinary.com/changa/image/upload/c_scale,f_auto,q_auto,w_520/v1533895397/commonshare/M-ChangaHiRes_Rectangle.png" alt="positive young women's voices mchanga donation">
 
             <hr>
 
@@ -32,9 +32,33 @@
             <h2 class="otherDonOptionsText">Other options</h2>
 
             <div class="providerHolder">
+                <div class="providerContainer">
+                    <img class="visaAndPP" src="https://i.pinimg.com/originals/54/e3/0e/54e30edf9d8e3f86b1935d5d3d1317d8.png" alt="">
+
+                
+
+                    <img class="visaAndPP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png" alt="">
+
+                    <div class="glow paypalDiv" id="donate-button-container">
+                        <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                        PayPal.Donation.Button({
+                        env:'production',
+                        hosted_button_id:'GWHGZSTRYB7DJ',
+                        image: {
+                        src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+                        alt:'Donate with PayPal button',
+                        title:'PayPal - The safer, easier way to pay online!',
+                        }
+                        }).render('#donate-button');
+                        </script>
+                    </div>
+                </div>
+
 
                 <div class="providerContainer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1200px-M-PESA_LOGO-01.svg.png" alt="">
+                    <img class="otherDonateImgs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1200px-M-PESA_LOGO-01.svg.png" alt="">
         
                     <ul>
                         <li><span>DIAL:</span> *483*57*14948#</li>
@@ -44,7 +68,7 @@
                 </div>
     
                 <div class="providerContainer">
-                    <img src="https://1000logos.net/wp-content/uploads/2018/01/Airtel-Logo.png" alt="">
+                    <img class="otherDonateImgs" src="https://1000logos.net/wp-content/uploads/2018/01/Airtel-Logo.png" alt="">
                     <ul>
                         <li><span>Business Name:</span> MCHANGA</li>
                         <li><span>Reference:</span> 14948</li>
@@ -52,7 +76,7 @@
                 </div>
     
                 <div class="providerContainer">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/c/c8/Equitel_Kenya_Logo.png" alt="">
+                    <img class="otherDonateImgs" src="https://upload.wikimedia.org/wikipedia/en/c/c8/Equitel_Kenya_Logo.png" alt="">
                     <ul>
                         <li><span>Business Number:</span> 891300</li>
                         <li><span>Account Number:</span> 14948</li>
@@ -60,7 +84,7 @@
                 </div>
     
                 <div class="providerContainer">
-                    <img src="https://play-lh.googleusercontent.com/jZ_MdC06hYd-RhoBzwYjYREWUP_JrNuijMkLK7UpcD0YtVFVwbf0qQTdSedhjOVDxtM" alt="">
+                    <img class="otherDonateImgs" src="https://play-lh.googleusercontent.com/jZ_MdC06hYd-RhoBzwYjYREWUP_JrNuijMkLK7UpcD0YtVFVwbf0qQTdSedhjOVDxtM" alt="">
                     <ul>
                         <li><span>DIAL:</span> *160*2*1#</li>
                         <li><span>PAYBILL:</span> 891300</li>
@@ -68,21 +92,9 @@
                     </ul>
                 </div>
 
-                <div class="providerContainer">
-                    <img src="https://i.pinimg.com/originals/54/e3/0e/54e30edf9d8e3f86b1935d5d3d1317d8.png" alt="">
-                    <form action="">
-                        <input type="number" required placeholder="Enter amount in KSH"><br><br>
-                        <input class="payPalAndVisaBtn" type="submit">
-                    </form>
-                </div>
+               
 
-                <div class="providerContainer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png" alt="">
-                    <form action="">
-                        <input type="number" required placeholder="Enter amount in KSH"><br><br>
-                        <input class="payPalAndVisaBtn" type="submit">
-                    </form>
-                </div>
+               
             </div>
         </div>
     </section>
