@@ -123,7 +123,6 @@ html {
   justify-content: center;
   padding: 100px 0 0 0 ;
   background-image:linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(../images/paperdotBG.png);
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -199,9 +198,7 @@ html {
   height: 400px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
- 
-  
+  justify-content: space-around; 
 }
 .numbersContainer :nth-child(3){
   color: rgb(110, 110, 110);
@@ -1704,7 +1701,10 @@ footer img {
 .feedTexts{
   display:flex ;
   justify-content:space-between; 
-  margin:20px 20px 0 20px
+  margin:40px 20px 0 20px
+}
+.feedTexts h1,h5{
+  font-size: 16px;
 }
 .recentPostsSection {
   margin: 20px;
@@ -1911,23 +1911,6 @@ footer form{
 .commentsAddSection{
   padding:40px
 }
-.pluSign{
-  color: rgb(212, 113, 0);
-  font-weight: 700;
-  font-size: 16px;
-  text-shadow: #000000 1px 1px 2px;
-}
-.numbersSection{
-  height: 80px;
-}
-/* .numbersSection :nth-child(2){
-  color: rgb(110, 110, 110);
-  font-weight: 900;
-  font-size: 8px;
-} */
-.counter-count{
-  font-size: 16px;
-}
 .partnersSection{
   padding: 0 20px;
   margin-bottom: 50px;
@@ -2002,5 +1985,239 @@ footer form{
   text-align: center;
   margin-bottom: 20px;
 }
+.nameDiv p{
+  font-size: 8px;
+  margin-top: 0px;
+  padding-left: 0px;
+}
+.nameDiv h5{
+  padding-left: 0px;
+  font-size: 12px;
+}
+.nameDiv h2{
+  padding-left: 0px;
+  font-size: 18px;
+}
+.nameDiv{
+  bottom: 0px;
+  padding: 0px;
+  z-index: 900;
+  width: 70%;
+  display: none;
+}
+.visionMissionLandingSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:0px 0 0 0 ;
+  background-image:linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(../images/paperdotBG.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+.visionMissionLanding{
+  display: flex;
+  align-items: initial;
+  justify-content: space-around;
+  margin: 20px 0 20px 0;
+}
+.valuesDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+  padding: 0 0px;
+  flex-wrap: wrap;
+}
+.valueItemContainer {
+  display: flex;
+  justify-content: initial;
+  flex-wrap: wrap;
+  padding: 0 0 0 20px;
+}
+.valueItemContainer div{
+  width: 43%;
+  margin-right: 20px;
+  /* border: #979797 solid 1px; */
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: #9b9b9b 2px 2px 10px;
+}
+.valueItemContainer h4{
+  font-size: 12px;
+}
+.valueItemContainer span{
+  font-weight: 800;
+  color: #f87000;
+  font-size: 13px;
+}
+.visionMissionLanding span{
+  font-weight: 800;
+  color: #f87000;
+}
+.visionMissionLanding h4{
+  font-size: 12px;
+}
+.visionMissionLandingSection img{
+  width: 150px;
+  margin-bottom: 20px;
+}
+.visionMissionLanding div{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: #9b9b9b 2px 2px 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.numbersContainer img{
+  width: 40px;
+  margin-bottom: 10px;
+}
+.numbersContainer :nth-child(3){
+  font-size: 10px;
+  text-align: center;
+}
+.achievementText{
+  margin: 20px 0 0px 20px;
+  font-size: 16px;
+}
+.pluSign{
+  font-size: 20px;
+}
+.counter-count{
+  font-size: 20px;
+}
+.numbersSection{
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+}
+.numbersContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.stackblocksLetterSection{
+  padding:0  10px;
+  margin: 40px 0 0 0;
+}
+.newsletterText{
+  margin: 0 0 20px 20px;
+  font-size: 16px;
+}
+.ourActivitiesTextAbsolute {
+  font-size: 16px;
+  margin: 100px 0 20px 20px;
+
+}
+.partnersSection img{
+  width: 50px;
+}
+
+.footerDiv iframe{
+  width: 100%;
+  margin-top: 40px;
+}
+
+
+.healthcareSection {
+  padding: 20px ;
+  justify-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.healthcareSection h1{
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: #000000 2px 2px 3px;
+  font-weight: 800;
+}
+.healthcareSection span{
+  color: #ff7300;
+}
+.healthcareItems {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+.healthcareItems h3 {
+  text-align: center;
+  font-size: 20px;
+}
+.healthcareItems img {
+  width: 70px;
+}
+
+.healthcareSection p {
+  text-align: center;
+}
+.healthcareItems div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  padding: 20px;
+  width: 280px;
+  height: 480px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.holdingContainer img{
+  width: 100%;
+  height: 200px;
+   
+ }
+ .mensSection{
+   padding: 20px;
+ }
+ .holdingContainer{
+   display: flex;
+   padding: 10px;
+ }
+ 
+ .holdingContainer h1{
+   text-shadow: none;
+   font-weight: 800;
+   margin: 20px 0;
+   font-size: 20px;
+ }
+ .providerHolder{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.providerContainer{
+  height: 300px;
+  width: 300px;
+  margin: 0 20px 20px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 20px 10px;
+  box-shadow: #cacaca 12px 12px 10px;
+}
+.carousel-item img{
+  filter: brightness(70%) contrast(1.2);
+  height: 200px;
+}
+
+
+
+
 
 }
