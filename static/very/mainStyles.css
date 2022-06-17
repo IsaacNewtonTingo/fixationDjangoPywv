@@ -3,14 +3,16 @@ body {
   padding: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: rgb(255, 255, 255);
-  
 }
 html {
   scroll-behavior: smooth;
   /* -webkit-backface-visibility: hidden;
   backface-visibility: hidden; */
 }
+div{
+  content-visibility: auto;
 
+}
 
 .glow {
    animation: glow 1s infinite alternate;
